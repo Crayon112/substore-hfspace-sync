@@ -15,12 +15,13 @@ jobs:
       - name: Update Dockerfile
         run: |
           NOW=$(date +"%Y-%m-%d %H:%M:%S");
-          sed -i "\$s/.*/# Release: ${NOW}/" Dockerfile
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHubActions"
+          git pull
+          sed -i "\$s/.*/# Release: ${NOW}/" Dockerfile
           git add Dockerfile
           git commit -m "version: ${NOW}"
-          git push https://${{ secrets.PAT }}@github.com/Crayon112/substore-hfspace-sync.git HEAD:master
+          git push https://github.com/Crayon112/substore-hfspace-sync.git HEAD:master
   
   sync:
     needs: update
