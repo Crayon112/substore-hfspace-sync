@@ -3,7 +3,7 @@ name: Sync with HuggingFace Hub
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
