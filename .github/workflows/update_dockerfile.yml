@@ -15,9 +15,9 @@ jobs:
       - name: Sync
         run: |
           NOW=date;
-          sed -i '$s/.*/# Release: $NOW/' Dockerfile
+          sed -i '$s/.*/# Release: ${NOW}/' Dockerfile
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHubActions"
           git add Dockerfile
-          git commit -m "version: $NOW"
+          git commit -m "version: ${NOW}"
           git push https://${{ secrets.PAT }}@github.com/Crayon112/substore-hfspace-sync.git HEAD:master
