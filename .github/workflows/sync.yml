@@ -3,7 +3,7 @@ name: Sync with HuggingFace Hub
 on:
   workflow_dispatch:
   schedule:
-    - cron: "* */6 3 * *"
+    - cron: "0 3 */3 * *"
 
 jobs:
   update:
