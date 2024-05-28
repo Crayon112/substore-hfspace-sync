@@ -14,4 +14,4 @@ RUN chmod 777 -R /opt/app
 
 CMD mkdir -p /opt/app/data; cd /opt/app/data; SUB_STORE_BACKEND_API_HOST=127.0.0.1 SUB_STORE_FRONTEND_HOST=0.0.0.0 SUB_STORE_FRONTEND_PORT=7860 SUB_STORE_FRONTEND_PATH=/opt/app/frontend SUB_STORE_DATA_BASE_PATH=/opt/app/data node /opt/app/sub-store.bundle.js
 
-# Release: 2024-05-25 03:17:19
+# Release: 2024-05-28 03:15:27
